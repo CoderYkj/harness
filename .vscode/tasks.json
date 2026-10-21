@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Godot: Check Project",
+      "type": "shell",
+      "command": "godot",
+      "args": ["--headless", "--path", "${workspaceFolder}", "--check-only"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Godot: Format Check",
+      "type": "shell",
+      "command": "gdformat",
+      "args": ["--check", "scripts/", "tests/"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Godot: Lint",
+      "type": "shell",
+      "command": "gdlint",
+      "args": ["scripts/", "tests/"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Godot: Run GUT Tests",
+      "type": "shell",
+      "command": "godot",
+      "args": [
+        "--headless",
+        "-s",
+        "addons/gut/gut_cmdln.gd",
+        "-gdir=res://tests",
+        "-gexit"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Harness: Vibe Coding",
+      "type": "shell",
+      "command": "harness",
+      "args": ["--workspace", "${workspaceFolder}", "run", "${input:godotPrompt}"],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "godotPrompt",
+      "type": "promptString",
+      "description": "输入 Godot 前端 vibe coding 任务"
+    }
+  ]
+}
