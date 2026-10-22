@@ -1,13 +1,13 @@
 # AGENTS.md
 
-本文件是 AI Agent（DeepSeek Harness / CLI Agent）在本 Godot 4 前端项目工作的**总入口**。
+本文件是 AI Agent（DeepSeek Harness / CLI Agent）在本 Godot 4.7.2 前端项目工作的**总入口**。
 任务开始前，必须先读本文件，再按顺序读取 `.harness/rules/` 下的规则。
 
 ---
 
 ## 1. 项目概述
 
-- 引擎：Godot 4.x（固定版本，见 `project.godot` 或 CI 配置）
+- 引擎：**Godot 4.7.2 stable（固定版本）**，见 `project.godot` 或 CI 配置；不使用 4.7.2 以外的 4.x 版本
 - 语言：GDScript（纯 GDScript 项目，不含 C#）
 - 定位：前端 / UI / 场景驱动，重视场景结构、主题资源、信号解耦
 - 测试：GUT（Godot Unit Testing），纯 GDScript 项目首选

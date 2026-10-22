@@ -24,7 +24,7 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:4.3
+      image: barichello/godot-ci:4.7.2  # 项目固定 Godot 4.7.2；若该 tag 未发布，用官方 4.7.2 发行包自建镜像
     steps:
       - uses: actions/checkout@v4
         with:
